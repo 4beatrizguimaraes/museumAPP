@@ -6,7 +6,7 @@ public class Museu {
 	private String nome;
 	private Localizacao localizacao;
 	private Categoria categoria;
-	private ArrayList<ObradeArte> obras;
+	private ArrayList<ObradeArte> obrasdeArte;
 	
 	
 	public Museu(String nome, Localizacao loc, Categoria categoria){
@@ -15,20 +15,20 @@ public class Museu {
 		this.categoria = categoria;
 	}
 	
-	public void adicionaObra(ObradeArte obra){
-		obras.add(obra);
-		obra.setMuseu(this);
+	public void adicionaObra(ObradeArte obradeArte){
+		this.obrasdeArte.add(obradeArte);
+		this.obrasdeArte.setMuseu(this);
 	}
 	
 	public void adicionaObra(ArrayList<ObradeArte> obrasdeArte){
-		for(ObradeArte obra : obrasdeArte){
-			obras.add(obra);
-			obra.setMuseu(this);
+		for(ObradeArte obradeArte : obrasdeArte){
+			this.obrasdeArte.add(obradeArte);
+			this.obra.setMuseu(this);
 		}
 	}
 	
-	public void excluiObra(ObradeArte obra){
-		obras.remove(obra);
+	public void excluiObra(ObradeArte obradeArte){
+		this.obrasdeArte.remove(obradeArte);
 	}
 
 	public String getNome() {
