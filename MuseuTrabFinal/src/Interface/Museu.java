@@ -17,13 +17,13 @@ public class Museu {
 	
 	public void adicionaObra(ObradeArte obradeArte){
 		this.obrasdeArte.add(obradeArte);
-		this.obrasdeArte.setMuseu(this);
+		obradeArte.setMuseu(this);
 	}
 	
 	public void adicionaObra(ArrayList<ObradeArte> obrasdeArte){
 		for(ObradeArte obradeArte : obrasdeArte){
 			this.obrasdeArte.add(obradeArte);
-			this.obra.setMuseu(this);
+			obradeArte.setMuseu(this);
 		}
 	}
 	
